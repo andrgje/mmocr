@@ -366,7 +366,7 @@ def load_img_info(files):
 def parse_args():
     parser = argparse.ArgumentParser(
         description='Convert totaltext annotations to COCO format')
-    parser.add_argument('root_path', help='totaltext root path')
+    parser.add_argument('-root_path', help='totaltext root path')
     parser.add_argument('-o', '--out-dir', help='output path')
     parser.add_argument(
         '--split-list',
@@ -387,10 +387,10 @@ def main():
 
     img_dir = osp.join(root_path, 'imgs')
     gt_dir = osp.join(root_path, 'annotations')
-
     set_name = {}
     for split in args.split_list:
         set_name.update({split: 'instances_' + split + '.json'})
+        print(osp.join(img_dir,split))
         assert osp.exists(osp.join(img_dir, split))
 
     for split, json_name in set_name.items():
