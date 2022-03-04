@@ -12,11 +12,11 @@ test_list = {{_base_.test_list}}
 train_pipeline_r50dcnv2 = {{_base_.train_pipeline_r50dcnv2}}
 test_pipeline_4068_1024 = {{_base_.test_pipeline_4068_1024}}
 
-load_from = 'checkpoints/textdet/dbnet/res50dcnv2_synthtext.pth'
+load_from = '../../backbone/dbnet/dbnet_r50dcnv2_fpnc_sbn_2e_synthtext_20210325-aa96e477.pth'
 
 data = dict(
-    samples_per_gpu=8,
-    workers_per_gpu=4,
+    samples_per_gpu=1,
+    workers_per_gpu=1,
     val_dataloader=dict(samples_per_gpu=1),
     test_dataloader=dict(samples_per_gpu=1),
     train=dict(
