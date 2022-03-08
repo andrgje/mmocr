@@ -16,9 +16,12 @@ RUN conda clean --all
 RUN pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu101/torch1.6.0/index.html
 
 RUN pip install mmdet==2.20.0
-
-RUN git clone https://github.com/open-mmlab/mmocr.git /mmocr
-WORKDIR /mmocr
 ENV FORCE_CUDA="1"
+
+WORKDIR /mmocr
+COPY requirements.txt .
+COPY requirements requirements/
 RUN pip install -r requirements.txt
+
+COPY . /mmocr
 RUN pip install --no-cache-dir -e .
