@@ -111,7 +111,7 @@ def load_img_info(files, dataset):
                 and strs[8] == '###') or (dataset == 'icdar2017'
                                           and strs[9] == '###'):
             iscrowd = 1
-            print('ignore text')
+            print(' ')
 
         area = polygon.area
         # convert to COCO style XYWH format

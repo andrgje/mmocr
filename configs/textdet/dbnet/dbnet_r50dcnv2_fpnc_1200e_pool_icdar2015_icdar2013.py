@@ -1,3 +1,6 @@
+from numpy import greater
+
+
 _base_ = [
     '../../_base_/runtime_10e.py',
     '../../_base_/schedules/schedule_sgd_1200e.py',
@@ -32,4 +35,4 @@ data = dict(
         datasets=test_list,
         pipeline=test_pipeline_4068_1024))
 
-evaluation = dict(interval=100, metric='hmean-iou')
+evaluation = dict(interval=1, metric=['hmean-iou'], save_best="0_hmean-iou:hmean", rule="greater")
