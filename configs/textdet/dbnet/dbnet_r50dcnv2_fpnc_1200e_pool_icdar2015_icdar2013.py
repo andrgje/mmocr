@@ -12,7 +12,7 @@ test_list = {{_base_.test_list}}
 train_pipeline_r50dcnv2 = {{_base_.train_pipeline_r50dcnv2}}
 test_pipeline_4068_1024 = {{_base_.test_pipeline_4068_1024}}
 
-load_from = '../../backbone/dbnet/dbnet_r50dcnv2_fpnc_sbn_2e_synthtext_20210325-aa96e477.pth'
+load_from = 'data/backbone/dbnet_r50dcnv2_fpnc_sbn_2e_synthtext_20210325-aa96e477.pth'
 
 data = dict(
     samples_per_gpu=1, #change from 8
