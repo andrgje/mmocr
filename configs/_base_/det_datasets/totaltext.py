@@ -9,7 +9,7 @@ train = dict(
 
 test = dict(
     type=dataset_type,
-    ann_file=f'{data_root}/instances_test.json',
+    ann_file=f'{data_root}/instances_validation.json',
     img_prefix=f'{data_root}/imgs',
     pipeline=None)
 
