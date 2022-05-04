@@ -31,4 +31,4 @@ data = dict(
         datasets=test_list,
         pipeline=test_pipeline_4068_1024))
 
-evaluation = dict(interval=1, metric='hmean-iou', save_best='hmean-iou:hmean', rule='greater')
+evaluation = dict(interval=1, metric='hmean-iou', save_best='0_hmean-iou_hmean', rule='greater')
