@@ -15,8 +15,8 @@ test_pipeline_4068_1024 = {{_base_.test_pipeline_4068_1024}}
 load_from = 'data/backbone/dbnet_r50dcnv2_fpnc_sbn_2e_synthtext_20210325-aa96e477.pth'
 
 data = dict(
-    samples_per_gpu=1, #change from 8
-    workers_per_gpu=1, #changed from 8
+    samples_per_gpu=10, #change from 8
+    workers_per_gpu=8, #changed from 8
     val_dataloader=dict(samples_per_gpu=1),
     test_dataloader=dict(samples_per_gpu=1),
     train=dict(
