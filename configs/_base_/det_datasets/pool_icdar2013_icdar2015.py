@@ -1,5 +1,5 @@
 dataset_type1 = 'IcdarDataset'
-data_root1 = '../data/icdar2015/dbnet'
+data_root1 = 'data/icdar15'
 
 train1 = dict(
     type=dataset_type1,
@@ -14,7 +14,7 @@ test1 = dict(
     pipeline=None)
 
 dataset_type2 = 'IcdarDataset'
-data_root2 = '../data/icdar2013/dbnet'
+data_root2 = 'data/icdar13'
 
 train2 = dict(
     type=dataset_type2,
