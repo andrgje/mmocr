@@ -1,6 +1,3 @@
-from numpy import greater
-
-
 _base_ = [
     '../../_base_/runtime_10e.py',
     '../../_base_/schedules/schedule_sgd_1200e.py',
