@@ -13,13 +13,10 @@ from .utils import tensor2grayimgs
 
 def retrieve_img_tensor_and_meta(data):
     """Retrieval img_tensor, img_metas and img_norm_cfg.
-
     Args:
         data (dict): One batch data from data_loader.
-
     Returns:
         tuple: Returns (img_tensor, img_metas, img_norm_cfg).
-
             - | img_tensor (Tensor): Input image tensor with shape
                 :math:`(N, C, H, W)`.
             - | img_metas (list[dict]): The metadata of images.
