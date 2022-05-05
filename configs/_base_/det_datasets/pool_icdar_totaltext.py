@@ -33,10 +33,9 @@ data_root3 = 'data/totaltext'
 
 train3 = dict(
     type=dataset_type3,
-    ann_file = f'{data_root3}/instances_training.json'
-    img_prefix = f'{data_root3}/imgs'
-    pipeline=None
-)
+    ann_file = f'{data_root3}/instances_training.json',
+    img_prefix = f'{data_root3}/imgs',
+    pipeline=None)
 
 test3 = dict(
     type=dataset_type3,
