@@ -102,6 +102,7 @@ def load_img_info(files, dataset):
         line = line.strip()
         strs = line.split(',')
         category_id = 1
+        print(line)
         xy = [int(x) for x in strs[0:8]]
         coordinates = np.array(xy).reshape(-1, 2)
         polygon = Polygon(coordinates)
