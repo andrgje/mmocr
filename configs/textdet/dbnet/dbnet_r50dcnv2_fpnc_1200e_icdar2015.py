@@ -33,3 +33,4 @@ data = dict(
         pipeline=test_pipeline_4068_1024))
 
 evaluation = dict(interval=100, metric='hmean-iou')
+    
