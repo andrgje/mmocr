@@ -1,5 +1,5 @@
 dataset_type= 'IcdarDataset'
-data_root = 'data/totaltext/'
+data_root = 'data/totaltext'
 
 train = dict(
     type = dataset_type,

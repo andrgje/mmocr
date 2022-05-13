@@ -1,5 +1,5 @@
 dataset_type = 'IcdarDataset'
-data_root = 'data/coco/'
+data_root = 'data/coco'
 
 train = dict(
     type=dataset_type,
