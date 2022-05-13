@@ -88,7 +88,7 @@ def get_contours_mat(gt_path):
     words = []
     data = scio.loadmat(gt_path)
     # 'gt' for the latest version; 'polygt' for the legacy version
-    data_polygt = data.get('polygt', data['gt'])
+    data_polygt = data.get('polygt', data['polygt'])
 
     for i, lines in enumerate(data_polygt):
         X = np.array(lines[1])
@@ -358,6 +358,7 @@ def load_img_info(files):
     elif osp.splitext(gt_file)[1] == '.txt':
         img_info = load_txt_info(gt_file, img_info)
     else:
+        print(gt_file)
         raise NotImplementedError
 
     return img_info

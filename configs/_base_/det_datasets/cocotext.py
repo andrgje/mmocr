@@ -1,11 +1,17 @@
 dataset_type = 'IcdarDataset'
-data_root = '../data/coco/dbnet'
+data_root = 'data/coco/'
 
 train = dict(
     type=dataset_type,
-    ann_file=f'{data_root}/cocotext.v2.json',
+    ann_file=f'{data_root}/instances_training.json',
     img_prefix=f'{data_root}/imgs',
     pipeline=None)
+
+validation = dict(
+    type=dataset_type,
+    ann_file=f'{data_root}/instances_validation.json',
+    img_prefix=f'{data_root}/imgs',
+    pipeline = None)
 
 test = dict(
     type=dataset_type,
@@ -14,5 +20,7 @@ test = dict(
     pipeline=None)
 
 train_list = [train]
+
+validation_list = [validation]
 
 test_list = [test]
