@@ -2,7 +2,7 @@ _base_ = [
     '../../_base_/runtime_10e.py',
     '../../_base_/schedules/schedule_sgd_1200e.py',
     '../../_base_/det_models/dbnet_r50dcnv2_fpnc.py',
-    '../../_base_/det_datasets/recFut',
+    '../../_base_/det_datasets/recFut.py',
     '../../_base_/det_pipelines/dbnet_pipeline.py'
 ]
 
